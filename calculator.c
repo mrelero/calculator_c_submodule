@@ -1,5 +1,6 @@
 #include "math_operations_h/operations.h"
 #include <stdio.h>
+#include <string.h>
 
 
 
@@ -12,17 +13,18 @@ enum OperationsEnum {
    MODULO,
    ISODD,
    DIVISAO,
+   EXP10,
 
    MAX_OPERATIONS
 
 };
-
 
 int main(void) {
    enum OperationsEnum eSelect;
    int iNumber1;
    int iNumber2;
    int iNumber3;
+
 
    while (1)
    {
@@ -80,6 +82,11 @@ int main(void) {
          printf("Digite Dividendo:\n");
          scanf_s("%d", &iNumber2);
          printf("%d/%d = %f \n", iNumber1, iNumber2, OPR_fDiv((float)iNumber1, (float) iNumber2));
+         break;
+      case EXP10:
+         printf("Digite Exp:\n");
+         scanf_s("%d", &iNumber1);
+         printf("10^%d = %ld\n", iNumber1, OPR_l10Exp(iNumber1));
          break;
       case MAX_OPERATIONS:
       default:
