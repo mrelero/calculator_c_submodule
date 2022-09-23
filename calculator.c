@@ -10,6 +10,7 @@ enum OperationsEnum {
    EXP,
    FATORIAL,
    MODULO,
+   ISODD, 
 
    MAX_OPERATIONS
 
@@ -23,7 +24,7 @@ int main(void) {
 
    while (1)
    {
-      printf("Selecione uma Operacao: \n 0 - Somar 3 Numeros \n 1 - Produto \n 2 - Exponencial \n 3 - Fatorial \n 4 - Modulo \n %d - Sair\n", MAX_OPERATIONS);
+      printf("Selecione uma Operacao: \n 0 - Somar 2 Numeros \n 1 - Produto \n 2 - Exponencial \n 3 - Fatorial \n 4 - Modulo \n 5 - Par Impar \n %d - Sair\n", MAX_OPERATIONS);
       scanf_s("%d", &eSelect);
       switch (eSelect)
       {
@@ -60,7 +61,15 @@ int main(void) {
          scanf_s("%d", &iNumber1);
          printf("Modulo igual: %d \n", OPR_iModulo(iNumber1));
          break;
-
+      case ISODD:
+         printf("Digite Numero:\n");
+         scanf_s("%d", &iNumber1);
+         if(OPR_iIsOdd(iNumber1) == 0){
+            printf("\nNumero Par \n");
+         }else{
+            printf("\nNumero Impar \n");
+         }
+         break;
       case MAX_OPERATIONS:
       default:
          return 1;
