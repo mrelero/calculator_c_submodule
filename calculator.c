@@ -21,10 +21,11 @@ int main(void) {
    enum OperationsEnum eSelect;
    int iNumber1;
    int iNumber2;
+   int iNumber3;
 
    while (1)
    {
-      printf("Selecione uma Operacao: \n 0 - Somar 2 Numeros \n 1 - Produto \n 2 - Exponencial \n 3 - Fatorial \n 4 - Modulo \n 5 - Par Impar \n %d - Sair\n", MAX_OPERATIONS);
+      printf("Selecione uma Operacao: \n 0 - Somar 3 Numeros \n 1 - Produto \n 2 - Exponencial \n 3 - Fatorial \n 4 - Modulo \n 5 - Par Impar \n %d - Sair\n", MAX_OPERATIONS);
       scanf_s("%d", &eSelect);
       switch (eSelect)
       {
@@ -34,7 +35,9 @@ int main(void) {
          scanf_s("%d", &iNumber1);
          printf("Digite Numero 2:\n");
          scanf_s("%d", &iNumber2);
-         printf("Soma igual: %d \n", OPR_iSoma(iNumber1, iNumber2));
+         printf("Digite Numero 3:\n");
+         scanf_s("%d", &iNumber3);
+         printf("Soma igual: %d \n", OPR_iSoma(iNumber1, iNumber2, iNumber3));
          break;
       case PRODUTO:
 
